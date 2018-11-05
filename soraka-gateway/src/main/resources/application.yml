@@ -26,7 +26,7 @@ zuul:
   sensitiveHeaders: Cookie,Set-Cookie
 #负载均衡
 ribbon:
-  ReadTimeout: 3000
+  ReadTimeout: 10000
 #熔断
 feign:
   hystrix:

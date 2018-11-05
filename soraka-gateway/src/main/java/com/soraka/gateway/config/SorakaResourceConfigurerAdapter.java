@@ -36,6 +36,8 @@ public class SorakaResourceConfigurerAdapter extends ResourceServerConfigurerAda
             .antMatchers("/auth/oauth/token_key").denyAll()
             .antMatchers(
                 "/auth/**",
+                "/admin/user/info",
+                "/admin/menu/userMenu",
                 "/*/swagger-ui.html",
                 "/*/swagger-resources/**",
                 "/*/v2/api-docs",
