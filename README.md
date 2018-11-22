@@ -1,4 +1,6 @@
-# soraka
+# Soraka
+
+[![vue](https://img.shields.io/badge/vue-2.5.17-brightgreen.svg)](https://github.com/vuejs/vue) [![element-ui](https://img.shields.io/badge/element--ui-2.4.6-brightgreen.svg)](https://github.com/ElemeFE/element) [![spring-boot](https://img.shields.io/badge/spring--boot-1.5.15.RELEASE-blue.svg)](https://spring.io/projects/spring-boot) [![spring-cloud](https://img.shields.io/badge/spring--cloud-Edgware.SR4-blue.svg)](https://spring.io/projects/spring-cloud) [![license](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://gitee.com/beiyoufx/soraka)
 
 - 前后端完全分离，基于Spring Boot 1.5.15.RELEASE
 - 基于网关的统一权限管理，更高效更方便
@@ -6,7 +8,7 @@
 - Apache LICENSE 2.0，完全开源
 
 # 项目介绍
-Soraka一个基于Spring Cloud的基础通用开发框架，有高效率，低封装的特点，非常适合学习和中小企业直接作为开发框架使用。
+Soraka一个基于Spring Cloud的基础微服务开发框架，有高效率，低封装的特点，非常适合学习和中小企业直接作为开发框架使用。
 
 项目使用Maven进行管理，结构如下：
 
@@ -27,19 +29,37 @@ soraka
 - 角色管理：角色菜单权限分配，最新的基于资源的权限控制（new RBAC）
 
 #### 软件架构
-软件架构说明
-1. 运行环境：JDK 1.8.0_161
-2. 主框架：Spring-boot 1.5.15.RELEASE
-3. 微服务：Spring-cloud Edgware.SR4
-4. 服务发现：Eureka
-5. 网关：Zuul
-6. 数据库：MySQL 5.7.16
-7. 微服务文档：Swagger2 2.7.0
-8. 安全框架：Spring Security OAuth
-9. 熔断器：Hystrix
-10. 负载均衡：Zuul搭配Ribbon
 
-#### 安装教程
+后端技术选型
+| 名称                  | 版本            | 说明         | 官网                                                         |
+| --------------------- | --------------- | ------------ | ------------------------------------------------------------ |
+| JDK                   | 1.8.0_161       | 运行环境     | https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html |
+| Maven                 | 3.5.2           | 项目构建管理 | http://maven.apache.org                                      |
+| Spring-boot           | 1.5.15.RELEASE1 | 微服务框架   | https://spring.io/projects/spring-boot                       |
+| Spring-cloud          | Edgware.SR4     | 微服务框架   | https://spring.io/projects/spring-cloud                      |
+| Eureka                |                 | 服务发现     | https://github.com/spring-cloud/spring-cloud-netflix         |
+| Zuul                  |                 | 网关         | https://github.com/spring-cloud/spring-cloud-netflix         |
+| MySQL                 | 5.7.16          | 数据库       | https://www.mysql.com/downloads/                             |
+| MyBatis               |                 | ORM框架      | http://blog.mybatis.org/                                     |
+| Swagger2              | 2.7.0           | 文档         | http://swagger.io                                            |
+| Spring Security OAuth |                 | 安全框架     | https://spring.io/projects/spring-security-oauth             |
+| Hystrix               |                 | 熔断器       | https://github.com/spring-cloud/spring-cloud-netflix         |
+| Ribbon                |                 | 负载均衡     | https://github.com/spring-cloud/spring-cloud-netflix         |
+前端技术选型
+
+| 名称               | 版本   | 说明         | 官网                                            |
+| ------------------ | ------ | ------------ | ----------------------------------------------- |
+| vue                | 2.5.17 | 前端框架     | https://github.com/vuejs/vue                    |
+| element-ui         | 2.4.6  | UI组件       | https://element.eleme.io/#/                     |
+| axios              | 0.18.0 | 网络组件     | https://github.com/axios/axios                  |
+| nprogress          | 0.2.0  | 进度条       | https://github.com/rstacruz/nprogress           |
+| vuex               | 3.0.1  | 前端状态管理 | https://github.com/vuejs/vuex                   |
+| vue-router         | 3.0.1  | 前端路由     | https://github.com/vuejs/vue-router             |
+| vue-admin-template |        | 后台模板     | https://github.com/PanJiaChen/vue-element-admin |
+
+
+
+#### 安装教程	
 
 1. 需要Java环境，JDK1.8以上
 2. 需要安装Maven
