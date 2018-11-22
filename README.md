@@ -8,6 +8,7 @@
 - Apache LICENSE 2.0，完全开源
 
 # 项目介绍
+
 Soraka一个基于Spring Cloud的基础微服务开发框架，有高效率，低封装的特点，非常适合学习和中小企业直接作为开发框架使用。
 
 项目使用Maven进行管理，结构如下：
@@ -21,6 +22,7 @@ soraka
 ├── soraka-gateway -- ZUUL网关（端口：80）
 ├── soraka-weixin -- 微信模块（待实现 端口：8004）
 ```
+
 前端项目链接：https://gitee.com/beiyoufx/soraka-view
 
 - 用户管理：完整的用户管理授权体系
@@ -31,6 +33,7 @@ soraka
 #### 软件架构
 
 后端技术选型
+
 | 名称                  | 版本            | 说明         | 官网                                                         |
 | --------------------- | --------------- | ------------ | ------------------------------------------------------------ |
 | JDK                   | 1.8.0_161       | 运行环境     | https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html |
@@ -45,6 +48,7 @@ soraka
 | Spring Security OAuth |                 | 安全框架     | https://spring.io/projects/spring-security-oauth             |
 | Hystrix               |                 | 熔断器       | https://github.com/spring-cloud/spring-cloud-netflix         |
 | Ribbon                |                 | 负载均衡     | https://github.com/spring-cloud/spring-cloud-netflix         |
+
 前端技术选型
 
 | 名称               | 版本   | 说明         | 官网                                            |
