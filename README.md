@@ -30,9 +30,9 @@ soraka
 - 菜单管理：配置系统菜单，操作权限，按钮权限标识，图标等
 - 角色管理：角色菜单权限分配，最新的基于资源的权限控制（new RBAC）
 
-#### 软件架构
+## 软件架构
 
-后端技术选型
+#### 后端技术选型
 
 | 名称                  | 版本            | 说明         | 官网                                                         |
 | --------------------- | --------------- | ------------ | ------------------------------------------------------------ |
@@ -49,7 +49,7 @@ soraka
 | Hystrix               |                 | 熔断器       | https://github.com/spring-cloud/spring-cloud-netflix         |
 | Ribbon                |                 | 负载均衡     | https://github.com/spring-cloud/spring-cloud-netflix         |
 
-前端技术选型
+#### 前端技术选型
 
 | 名称               | 版本   | 说明         | 官网                                            |
 | ------------------ | ------ | ------------ | ----------------------------------------------- |
@@ -61,14 +61,22 @@ soraka
 | vue-router         | 3.0.1  | 前端路由     | https://github.com/vuejs/vue-router             |
 | vue-admin-template |        | 后台模板     | https://github.com/PanJiaChen/vue-element-admin |
 
+# 安装教程	
 
+1. 需要`Java`环境，`JDK1.8`以上
 
-#### 安装教程	
+2. 需要安装`Maven`
 
-1. 需要Java环境，JDK1.8以上
-2. 需要安装Maven
-3. 需要MySQL数据库，数据库字符集utf-8mb4
+3. 需要`MySQL`数据库，数据库字符集`utf-8mb4`
+
 4. 执行脚本`soraka\soraka-admin\soraka-init.sql`初始化数据库
+
 5. 修改`soraka-admin`数据库地址
+
 6. 依次启动`soraka-discovery`、`soraka-admin`、`soraka-auth`、`soraka-gateway`
+
 7. 前端项目在：https://gitee.com/beiyoufx/soraka-view
+
+# 截图
+
+![Soraka演示](https://gitee.com/beiyoufx/soraka-view/raw/master/demo.gif)
