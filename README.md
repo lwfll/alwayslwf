@@ -2,10 +2,12 @@
 
 [![vue](https://img.shields.io/badge/vue-2.5.17-brightgreen.svg)](https://github.com/vuejs/vue) [![element-ui](https://img.shields.io/badge/element--ui-2.4.6-brightgreen.svg)](https://github.com/ElemeFE/element) [![spring-boot](https://img.shields.io/badge/spring--boot-1.5.15.RELEASE-blue.svg)](https://spring.io/projects/spring-boot) [![spring-cloud](https://img.shields.io/badge/spring--cloud-Edgware.SR4-blue.svg)](https://spring.io/projects/spring-cloud) [![license](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://gitee.com/beiyoufx/soraka)
 
-- 前后端完全分离，基于Spring Boot 1.5.15.RELEASE
+- 前后端完全分离，基于`Spring Boot 1.5.15.RELEASE`
 - 基于网关的统一权限管理，更高效更方便
 - 基于`Spring Security OAuth`实现按钮级细粒度权限控制
-- Apache LICENSE 2.0，完全开源
+- `Apache LICENSE 2.0`，完全开源
+
+交流QQ群：808305454
 
 # 项目介绍
 
