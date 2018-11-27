@@ -63,21 +63,9 @@ soraka
 | vue-router         | 3.0.1  | 前端路由     | https://github.com/vuejs/vue-router             |
 | vue-admin-template |        | 后台模板     | https://github.com/PanJiaChen/vue-element-admin |
 
-# 安装教程	
+# 文档
 
-1. 需要`Java`环境，`JDK1.8`以上
-
-2. 需要安装`Maven`
-
-3. 需要`MySQL`数据库，数据库字符集`utf-8mb4`
-
-4. 执行脚本`soraka\soraka-admin\soraka-init.sql`初始化数据库
-
-5. 修改`soraka-admin`数据库地址
-
-6. 依次启动`soraka-discovery`、`soraka-admin`、`soraka-auth`、`soraka-gateway`
-
-7. 前端项目在：https://gitee.com/beiyoufx/soraka-view
+1. [快速开始](soraka-wiki/快速开始.md)
 
 # 截图
 
