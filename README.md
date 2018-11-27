@@ -70,3 +70,11 @@ soraka
 # 截图
 
 ![Soraka演示](https://gitee.com/beiyoufx/soraka-view/raw/master/demo.gif)
+
+# 关注我们
+
+公众号 **Java实践笔记**
+
+分享Java开发中常用的技术，分享软件开发的新技术，分享业内相关的解决方案和互联网资讯，让自己做一个紧跟时代潮流的程序猿~
+
+![img](https://gitee.com/beiyoufx/soraka-view/raw/master/javanoteqr.jpg)
