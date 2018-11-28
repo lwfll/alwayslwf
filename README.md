@@ -1,8 +1,24 @@
-![soraka-logo](soraka-wiki/images/logo.png)
+<center><img width="220" src="soraka-wiki/images/logo.png"></center>
+
+<center>
+  <a href="https://github.com/vuejs/vue">
+    <img src="https://img.shields.io/badge/vue-2.5.17-brightgreen.svg" alt="vue">
+  </a>
+  <a href="https://github.com/ElemeFE/element">
+    <img src="https://img.shields.io/badge/element--ui-2.4.6-brightgreen.svg" alt="element-ui">
+  </a>
+  <a href="https://spring.io/projects/spring-boot">
+    <img src="https://img.shields.io/badge/spring--boot-1.5.15.RELEASE-blue.svg" alt="spring-boot">
+  </a>
+  <a href="https://spring.io/projects/spring-cloud">
+    <img src="https://img.shields.io/badge/spring--cloud-Edgware.SR4-blue.svg" alt="spring-cloud">
+  </a>
+  <a href="https://gitee.com/beiyoufx/soraka">
+    <img src="https://img.shields.io/badge/license-Apache%202.0-green.svg" alt="license">
+  </a>
+</center>
 
 # Soraka
-
-[![vue](https://img.shields.io/badge/vue-2.5.17-brightgreen.svg)](https://github.com/vuejs/vue) [![element-ui](https://img.shields.io/badge/element--ui-2.4.6-brightgreen.svg)](https://github.com/ElemeFE/element) [![spring-boot](https://img.shields.io/badge/spring--boot-1.5.15.RELEASE-blue.svg)](https://spring.io/projects/spring-boot) [![spring-cloud](https://img.shields.io/badge/spring--cloud-Edgware.SR4-blue.svg)](https://spring.io/projects/spring-cloud) [![license](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://gitee.com/beiyoufx/soraka)
 
 - 前后端完全分离，基于`Spring Boot 1.5.15.RELEASE`
 - 基于网关的统一权限管理，更高效更方便
