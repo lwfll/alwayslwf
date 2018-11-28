@@ -1,6 +1,6 @@
-<center><img width="220" src="soraka-wiki/images/logo.png"></center>
-<br>
-<center>
+<p align="center"><img width="220" src="soraka-wiki/images/logo.png"></p>
+
+<p align="center">
   <a href="https://github.com/vuejs/vue">
     <img src="https://img.shields.io/badge/vue-2.5.17-brightgreen.svg" alt="vue">
   </a>
@@ -16,7 +16,8 @@
   <a href="https://gitee.com/beiyoufx/soraka">
     <img src="https://img.shields.io/badge/license-Apache%202.0-green.svg" alt="license">
   </a>
-</center>
+</p>
+
 
 # Soraka
 
