@@ -66,6 +66,7 @@ soraka
 # 文档
 
 1. [快速开始](soraka-wiki/快速开始.md)
+2. [常见问题](soraka-wiki/常见问题.md)
 
 # 截图
 
