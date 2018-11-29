@@ -35,7 +35,6 @@ feign:
 security:
   auth:
     server: http://localhost:8005
-  sessions: stateless
   oauth2:
     client:
       client-id: soraka
