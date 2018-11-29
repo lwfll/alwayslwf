@@ -45,7 +45,7 @@ public class SorakaAuthorizationConfigurerAdapter extends AuthorizationServerCon
         clients.inMemory().withClient("soraka")
             .authorizedGrantTypes("password", "refresh_token", "authorization_code")
             .scopes("server")
-            .secret("soraka")
+            .secret(passwordEncoder().encode("soraka"))
             .autoApprove(false);
     }
 

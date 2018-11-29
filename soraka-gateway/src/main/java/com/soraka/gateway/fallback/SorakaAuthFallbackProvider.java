@@ -17,17 +17,12 @@ public class SorakaAuthFallbackProvider implements FallbackProvider {
     private static final String SERVICE_DISABLE = "服务不可用";
 
     @Override
-    public ClientHttpResponse fallbackResponse(Throwable cause) {
+    public ClientHttpResponse fallbackResponse(String route, Throwable cause) {
         return new SorakaFallbackResponse(cause, SERVICE_NAME, SERVICE_DISABLE);
     }
 
     @Override
     public String getRoute() {
         return SERVICE_NAME;
-    }
-
-    @Override
-    public ClientHttpResponse fallbackResponse() {
-        return fallbackResponse(null);
     }
 }
