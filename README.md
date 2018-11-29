@@ -8,10 +8,10 @@
     <img src="https://img.shields.io/badge/element--ui-2.4.6-brightgreen.svg" alt="element-ui">
   </a>
   <a href="https://spring.io/projects/spring-boot">
-    <img src="https://img.shields.io/badge/spring--boot-1.5.15.RELEASE-blue.svg" alt="spring-boot">
+    <img src="https://img.shields.io/badge/spring--boot-2.0.6.RELEASE-blue.svg" alt="spring-boot">
   </a>
   <a href="https://spring.io/projects/spring-cloud">
-    <img src="https://img.shields.io/badge/spring--cloud-Edgware.SR4-blue.svg" alt="spring-cloud">
+    <img src="https://img.shields.io/badge/spring--cloud-Finchley.SR2-blue.svg" alt="spring-cloud">
   </a>
   <a href="https://gitee.com/beiyoufx/soraka">
     <img src="https://img.shields.io/badge/license-Apache%202.0-green.svg" alt="license">
@@ -19,9 +19,10 @@
 </p>
 
 
+
 # Soraka
 
-- 前后端完全分离，基于`Spring Boot 1.5.15.RELEASE`
+- 前后端完全分离，基于最新稳定版本`Spring Boot 2.0.6.RELEASE`
 - 基于网关的统一权限管理，更高效更方便
 - 基于`Spring Security OAuth`实现按钮级细粒度权限控制
 - `Apache LICENSE 2.0`，完全开源
@@ -55,20 +56,20 @@ soraka
 
 #### 后端技术选型
 
-| 名称                  | 版本            | 说明         | 官网                                                         |
-| --------------------- | --------------- | ------------ | ------------------------------------------------------------ |
-| JDK                   | 1.8.0_161       | 运行环境     | https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html |
-| Maven                 | 3.5.2           | 项目构建管理 | http://maven.apache.org                                      |
-| Spring-boot           | 1.5.15.RELEASE1 | 微服务框架   | https://spring.io/projects/spring-boot                       |
-| Spring-cloud          | Edgware.SR4     | 微服务框架   | https://spring.io/projects/spring-cloud                      |
-| Eureka                |                 | 服务发现     | https://github.com/spring-cloud/spring-cloud-netflix         |
-| Zuul                  |                 | 网关         | https://github.com/spring-cloud/spring-cloud-netflix         |
-| MySQL                 | 5.7.16          | 数据库       | https://www.mysql.com/downloads/                             |
-| MyBatis               |                 | ORM框架      | http://blog.mybatis.org/                                     |
-| Swagger2              | 2.7.0           | 文档         | http://swagger.io                                            |
-| Spring Security OAuth |                 | 安全框架     | https://spring.io/projects/spring-security-oauth             |
-| Hystrix               |                 | 熔断器       | https://github.com/spring-cloud/spring-cloud-netflix         |
-| Ribbon                |                 | 负载均衡     | https://github.com/spring-cloud/spring-cloud-netflix         |
+| 名称                  | 版本           | 说明         | 官网                                                         |
+| --------------------- | -------------- | ------------ | ------------------------------------------------------------ |
+| JDK                   | 1.8.0_161      | 运行环境     | https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html |
+| Maven                 | 3.5.2          | 项目构建管理 | http://maven.apache.org                                      |
+| Spring-boot           | 2.0.6.RELEASE1 | 微服务框架   | https://spring.io/projects/spring-boot                       |
+| Spring-cloud          | Finchley.SR2   | 微服务框架   | https://spring.io/projects/spring-cloud                      |
+| Eureka                |                | 服务发现     | https://github.com/spring-cloud/spring-cloud-netflix         |
+| Zuul                  |                | 网关         | https://github.com/spring-cloud/spring-cloud-netflix         |
+| MySQL                 | 5.7.16         | 数据库       | https://www.mysql.com/downloads/                             |
+| MyBatis               |                | ORM框架      | http://blog.mybatis.org/                                     |
+| Swagger2              | 2.7.0          | 文档         | http://swagger.io                                            |
+| Spring Security OAuth |                | 安全框架     | https://spring.io/projects/spring-security-oauth             |
+| Hystrix               |                | 熔断器       | https://github.com/spring-cloud/spring-cloud-netflix         |
+| Ribbon                |                | 负载均衡     | https://github.com/spring-cloud/spring-cloud-netflix         |
 
 #### 前端技术选型
 
