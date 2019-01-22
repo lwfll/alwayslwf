@@ -1,5 +1,6 @@
 package com.soraka.auth.config;
 
+import com.soraka.common.constant.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,11 +14,13 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
+import javax.sql.DataSource;
 import java.util.Arrays;
 
 /**
@@ -31,22 +34,23 @@ import java.util.Arrays;
 @EnableAuthorizationServer
 public class SorakaAuthorizationConfigurerAdapter extends AuthorizationServerConfigurerAdapter {
     @Autowired
-    AuthenticationManager authenticationManager;
+    private DataSource dataSource;
     @Autowired
-    UserDetailsService userDetailsService;
+    private AuthenticationManager authenticationManager;
     @Autowired
-    TokenEnhancer tokenEnhancer;
+    private UserDetailsService userDetailsService;
     @Autowired
-    JwtAccessTokenConverter jwtAccessTokenConverter;
+    private TokenEnhancer tokenEnhancer;
+    @Autowired
+    private JwtAccessTokenConverter jwtAccessTokenConverter;
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        //配置一个内存客户端，用于测试
-        clients.inMemory().withClient("soraka")
-            .authorizedGrantTypes("password", "refresh_token", "authorization_code")
-            .scopes("server")
-            .secret(passwordEncoder().encode("soraka"))
-            .autoApprove(false);
+        JdbcClientDetailsService clientDetailsService = new JdbcClientDetailsService(dataSource);
+        clientDetailsService.setSelectClientDetailsSql(Constants.DEFAULT_SELECT_STATEMENT);
+        clientDetailsService.setFindClientDetailsSql(Constants.DEFAULT_FIND_STATEMENT);
+        clientDetailsService.setPasswordEncoder(passwordEncoder());
+        clients.withClientDetails(clientDetailsService);
     }
 
     @Override

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50716
 File Encoding         : 65001
 
-Date: 2018-10-30 20:27:06
+Date: 2019-01-22 15:55:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -99,6 +99,30 @@ INSERT INTO `sys_menu` VALUES ('27', '部门修改', null, null, '2', null, '/ad
 INSERT INTO `sys_menu` VALUES ('28', '部门删除', null, null, '2', null, '/admin/dept/**', 'DELETE', 'sys_dept_delete', null, '5', '0', '1', '2018-10-30 11:08:01', '2018-10-30 11:08:01');
 
 -- ----------------------------
+-- Table structure for sys_oauth_client_details
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_oauth_client_details`;
+CREATE TABLE `sys_oauth_client_details` (
+  `client_id` varchar(50) NOT NULL COMMENT '主键，用于唯一标识每一个客户端(client)',
+  `resource_ids` varchar(256) DEFAULT NULL COMMENT '客户端所能访问的资源id集合,多个资源时用逗号(,)分隔,如: "unity-resource,mobile-resource".',
+  `client_secret` varchar(256) DEFAULT NULL COMMENT '用于指定客户端(client)的访问密匙',
+  `scope` varchar(256) DEFAULT NULL COMMENT '指定客户端申请的权限范围,可选值包括read,write,trust;',
+  `authorized_grant_types` varchar(256) DEFAULT NULL COMMENT '指定客户端支持的grant_type,可选值包括authorization_code,password,refresh_token,implicit,client_credentials,',
+  `web_server_redirect_uri` varchar(256) DEFAULT NULL COMMENT '客户端的重定向URI,可为空',
+  `authorities` varchar(256) DEFAULT NULL COMMENT '指定客户端所拥有的Spring Security的权限值,可选',
+  `access_token_validity` int(11) DEFAULT NULL COMMENT '设定客户端的access_token的有效时间值(单位:秒),',
+  `refresh_token_validity` int(11) DEFAULT NULL COMMENT '设定客户端的refresh_token的有效时间值(单位:秒),可选,',
+  `additional_information` varchar(4096) DEFAULT NULL COMMENT '这是一个预留的字段,在Oauth的流程中没有实际的使用,可选',
+  `autoapprove` varchar(256) DEFAULT NULL COMMENT '设置用户是否自动Approval操作',
+  PRIMARY KEY (`client_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+-- ----------------------------
+-- Records of sys_oauth_client_details
+-- ----------------------------
+INSERT INTO `sys_oauth_client_details` VALUES ('soraka', null, '$2a$10$JuDBWyd6769RO8HZjcdaQOZnG3iVUH7N857dcBNpEfopP3tzTVqpm', 'server', 'password,refresh_token,authorization_code', null, null, null, null, null, null);
+
+-- ----------------------------
 -- Table structure for sys_role
 -- ----------------------------
 DROP TABLE IF EXISTS `sys_role`;
@@ -119,7 +143,7 @@ CREATE TABLE `sys_role` (
 -- Records of sys_role
 -- ----------------------------
 INSERT INTO `sys_role` VALUES ('1', 'admin', '超级管理员', '拥有系统所有权限', '1', '1', '1', '2018-08-15 13:35:36', '2018-10-16 16:56:10');
-INSERT INTO `sys_role` VALUES ('2', 'tech', '研发', '拥有研发人员权限', '1', '1', '1', '2018-08-29 14:27:05', '2018-08-29 14:27:05');
+INSERT INTO `sys_role` VALUES ('2', 'tech', '研发', '拥有研发人员权限', '1', '1', '1', '2018-08-29 14:27:05', '2018-11-05 16:48:12');
 INSERT INTO `sys_role` VALUES ('3', 'editor', '编辑', '拥有编辑人员权限', '1', '1', '1', '2018-08-29 14:27:30', '2018-08-29 14:27:30');
 INSERT INTO `sys_role` VALUES ('4', 'string', 'string', 'string', '1', '1', '0', '2018-08-30 16:47:33', '2018-10-16 16:26:57');
 INSERT INTO `sys_role` VALUES ('8', 'ceshi', '测试', '测试', '0', null, null, '2018-10-16 16:32:48', '2018-10-16 16:44:49');
@@ -133,16 +157,11 @@ CREATE TABLE `sys_role_menu` (
   `role_id` bigint(20) NOT NULL COMMENT '角色ID',
   `menu_id` bigint(20) NOT NULL COMMENT '菜单ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=159 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of sys_role_menu
 -- ----------------------------
-INSERT INTO `sys_role_menu` VALUES ('7', '2', '1');
-INSERT INTO `sys_role_menu` VALUES ('8', '2', '2');
-INSERT INTO `sys_role_menu` VALUES ('9', '2', '3');
-INSERT INTO `sys_role_menu` VALUES ('10', '2', '4');
-INSERT INTO `sys_role_menu` VALUES ('11', '2', '5');
 INSERT INTO `sys_role_menu` VALUES ('12', '3', '6');
 INSERT INTO `sys_role_menu` VALUES ('59', '4', '1');
 INSERT INTO `sys_role_menu` VALUES ('60', '4', '2');
@@ -182,6 +201,19 @@ INSERT INTO `sys_role_menu` VALUES ('100', '1', '25');
 INSERT INTO `sys_role_menu` VALUES ('101', '1', '26');
 INSERT INTO `sys_role_menu` VALUES ('102', '1', '27');
 INSERT INTO `sys_role_menu` VALUES ('103', '1', '28');
+INSERT INTO `sys_role_menu` VALUES ('146', '2', '1');
+INSERT INTO `sys_role_menu` VALUES ('147', '2', '2');
+INSERT INTO `sys_role_menu` VALUES ('148', '2', '14');
+INSERT INTO `sys_role_menu` VALUES ('149', '2', '13');
+INSERT INTO `sys_role_menu` VALUES ('150', '2', '12');
+INSERT INTO `sys_role_menu` VALUES ('151', '2', '3');
+INSERT INTO `sys_role_menu` VALUES ('152', '2', '19');
+INSERT INTO `sys_role_menu` VALUES ('153', '2', '16');
+INSERT INTO `sys_role_menu` VALUES ('154', '2', '4');
+INSERT INTO `sys_role_menu` VALUES ('155', '2', '21');
+INSERT INTO `sys_role_menu` VALUES ('156', '2', '5');
+INSERT INTO `sys_role_menu` VALUES ('157', '2', '27');
+INSERT INTO `sys_role_menu` VALUES ('158', '2', '25');
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -203,17 +235,19 @@ CREATE TABLE `sys_user` (
   `modify_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
   `deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除标记：0未删除1已删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
 INSERT INTO `sys_user` VALUES ('1', 'soraka', '索拉卡', '13199998888', 'soraka@soraka.com', '$2a$10$vEDFbWM5OzmMBQCKopTrCujtnQgq.sN1cSNLoRXjKFN5lS9C3rHbq', '1', '1', '1', '1', '1', '2018-08-15 17:58:07', '2018-09-12 11:53:03', '0');
-INSERT INTO `sys_user` VALUES ('2', 'mayun', '马云', '13177778888', 'yun.ma@soraka.com', '108bc499f1892313a191e71f108ec8ea', '0', '2', '0', '1', '1', '2018-08-29 14:31:13', '2018-08-29 14:31:13', '0');
-INSERT INTO `sys_user` VALUES ('3', 'mahuateng', '马化腾', '13166668888', 'huateng.ma@soraka.com', '108bc499f1892313a191e71f108ec8ea', '1', '1', '1', '1', '1', '2018-08-29 14:32:44', '2018-08-29 14:32:44', '0');
-INSERT INTO `sys_user` VALUES ('4', 'liyanhong', '李彦宏', '13155552222', 'liyanhong@baidu.com', '117619b977f8303b90d275486c055356', '1', '1', '1', null, null, '2018-09-11 18:46:28', '2018-09-11 19:26:09', '0');
-INSERT INTO `sys_user` VALUES ('5', 'liuqiangdong', '刘强东', '13111112222', 'liuqiangdong@jd.com', '8cb9709cd0f5917493349e6bbbebd5ea', '2', '2', '1', null, null, '2018-09-12 11:46:24', '2018-09-12 11:46:24', '0');
-INSERT INTO `sys_user` VALUES ('6', 'dinglei', '丁磊', '13122224444', 'dinglei@163.com', '2fe8e1ae801997d9d6656ed1e0a158cb', '2', '1', '1', null, null, '2018-09-12 11:49:24', '2018-09-13 15:59:49', '0');
+INSERT INTO `sys_user` VALUES ('2', 'mayun', '马云', '13177778888', 'yun.ma@soraka.com', '$2a$10$vEDFbWM5OzmMBQCKopTrCujtnQgq.sN1cSNLoRXjKFN5lS9C3rHbq', '0', '2', '0', '1', '1', '2018-08-29 14:31:13', '2018-08-29 14:31:13', '0');
+INSERT INTO `sys_user` VALUES ('3', 'mahuateng', '马化腾', '13166668888', 'huateng.ma@soraka.com', '$2a$10$vEDFbWM5OzmMBQCKopTrCujtnQgq.sN1cSNLoRXjKFN5lS9C3rHbq', '1', '1', '1', '1', '1', '2018-08-29 14:32:44', '2018-08-29 14:32:44', '0');
+INSERT INTO `sys_user` VALUES ('4', 'liyanhong', '李彦宏', '13155552222', 'liyanhong@baidu.com', '$2a$10$vEDFbWM5OzmMBQCKopTrCujtnQgq.sN1cSNLoRXjKFN5lS9C3rHbq', '1', '1', '1', null, null, '2018-09-11 18:46:28', '2018-09-11 19:26:09', '0');
+INSERT INTO `sys_user` VALUES ('5', 'liuqiangdong', '刘强东', '13111112222', 'liuqiangdong@jd.com', '$2a$10$vEDFbWM5OzmMBQCKopTrCujtnQgq.sN1cSNLoRXjKFN5lS9C3rHbq', '2', '2', '1', null, null, '2018-09-12 11:46:24', '2018-09-12 11:46:24', '0');
+INSERT INTO `sys_user` VALUES ('6', 'dinglei', '丁磊', '13122224444', 'dinglei@163.com', '$2a$10$vEDFbWM5OzmMBQCKopTrCujtnQgq.sN1cSNLoRXjKFN5lS9C3rHbq', '2', '1', '1', null, null, '2018-09-12 11:49:24', '2018-09-13 15:59:49', '0');
+INSERT INTO `sys_user` VALUES ('7', 'sunwukong', '孙悟空', '13111112222', 'sunwukong@soraka.com', '$2a$10$.OWPFLTMtS3PM2ebyzgW0OwoWjddtLDdxbZ1NRmNRVOH4aqAd5vS.', '2', '7', '1', null, null, '2018-11-05 17:51:45', '2018-11-05 17:51:45', '0');
+INSERT INTO `sys_user` VALUES ('8', 'tangseng', '唐僧', '13122223333', 'tangseng@soraka.com', '$2a$10$/.ntcn6RnViZI18QkROxP.PUXYWkmXtIZZfQvK3NRquZ.E3muViG6', '2', '4', '1', null, null, '2018-11-05 18:02:13', '2018-11-05 18:02:13', '0');
 
 -- ----------------------------
 -- Table structure for sys_user_role
@@ -224,7 +258,7 @@ CREATE TABLE `sys_user_role` (
   `user_id` bigint(20) NOT NULL COMMENT '用户ID',
   `role_id` bigint(20) NOT NULL COMMENT '角色ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of sys_user_role
@@ -236,3 +270,5 @@ INSERT INTO `sys_user_role` VALUES ('12', '4', '3');
 INSERT INTO `sys_user_role` VALUES ('13', '5', '4');
 INSERT INTO `sys_user_role` VALUES ('17', '1', '1');
 INSERT INTO `sys_user_role` VALUES ('18', '6', '2');
+INSERT INTO `sys_user_role` VALUES ('19', '7', '2');
+INSERT INTO `sys_user_role` VALUES ('20', '8', '2');
