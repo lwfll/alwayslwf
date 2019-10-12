@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/soraka.iml" filepath="$PROJECT_DIR$/soraka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soraka-admin/soraka-admin.iml" filepath="$PROJECT_DIR$/soraka-admin/soraka-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soraka-auth/soraka-auth.iml" filepath="$PROJECT_DIR$/soraka-auth/soraka-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soraka-common/soraka-common.iml" filepath="$PROJECT_DIR$/soraka-common/soraka-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soraka-discovery/soraka-discovery.iml" filepath="$PROJECT_DIR$/soraka-discovery/soraka-discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soraka-gateway/soraka-gateway.iml" filepath="$PROJECT_DIR$/soraka-gateway/soraka-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soraka-weixin/soraka-weixin.iml" filepath="$PROJECT_DIR$/soraka-weixin/soraka-weixin.iml" />
+    </modules>
+  </component>
+</project>

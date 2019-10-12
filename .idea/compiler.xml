@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="soraka-common" />
+        <module name="soraka-gateway" />
+        <module name="soraka-auth" />
+        <module name="soraka-weixin" />
+        <module name="soraka-admin" />
+        <module name="soraka-discovery" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="soraka" target="1.8" />
+      <module name="soraka-admin" target="1.8" />
+      <module name="soraka-auth" target="1.8" />
+      <module name="soraka-common" target="1.8" />
+      <module name="soraka-discovery" target="1.8" />
+      <module name="soraka-gateway" target="1.8" />
+      <module name="soraka-weixin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
